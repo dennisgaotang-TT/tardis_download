@@ -23,7 +23,8 @@ class CSVDownloader:
         self.logger = logger
         self.DOWNLOAD_FOLDER = "/tt_data/tardis_datasets"
 
-    """multiprocess download all the symbols' all types of available datasets for all exchanges in the list for a given day
+    """multiprocess download all the symbols' all types of available datasets for all exchanges in the list for a given day.
+    This function create multiple process in the pool each associated with an exchange to download, which calles the below download_all_datasets_for_an_exchange() function 
        args: exchanges: []
        return: none
     """
