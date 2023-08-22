@@ -14,7 +14,7 @@ After figuring out which exchange and since when this exchange is available on T
 
 ## CSVDownloader class in ./tardis/downloader.py
 This class mainly contains wrapper instance functions of tardis.datasets API to download .csv.gz datasets according to user needs. It takes care of the error raised by inputing out-of-range time period.
-**User can specified an out of range [from_date, to_date], but the downloader will only download the overlapped time window with the pair's [availableSince, availableTo] without causing exception.**
+**User can specified an out of range [from_date, to_date), but the downloader will only download the overlapped time window with the pair's [availableSince, availableTo) without causing exception.**
 Users need to first instanciate a CSVDownloader instance and then call the according functions. The destination folder of the download files is specified in the constructor of the class.
 
 * use case 1: **download all datasets of all pairs for specified: several exchanges and timeperiod**:
