@@ -10,7 +10,7 @@ After figuring out which exchange and since when this exchange is available on T
 
 ## Dependencies: 
 * "pip install tardis-dev"
-* ./configs/tardis/downloader.json
+* ./configs/tardis/downloader.json, which contains the keys
 
 ## CSVDownloader class in ./tardis/downloader.py
 This class mainly contains wrapper instance functions of tardis.datasets API to download .csv.gz datasets according to user needs. It takes care of the error raised by inputing out-of-range time period.
@@ -42,3 +42,4 @@ A simple scripts to download all the data for an exchange
 ## Observation:
 1. you can repeatedly run a download script for multiple times and the program will not download the existing files again.
 2. Since the datasets is very large, creating multiple processes might not help with the download speed as it is bounded by the internet bandwidth.
+3. User may not be able to call Tardis's key via different machine(IP address). This will cause "permission denied" error.
